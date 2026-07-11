@@ -1,5 +1,8 @@
 # NFTicket — anti-scalping NFT ticketing
 
+[![CI](https://github.com/mingqinzheng666-lgtm/nfticket/actions/workflows/ci.yml/badge.svg)](https://github.com/mingqinzheng666-lgtm/nfticket/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Event tickets as ERC-721 NFTs, with the anti-scalping rules enforced **on-chain**
 instead of by policy: a hard resale price ceiling, a per-ticket resale count
 limit, and check-in that burns a ticket's resale rights. A Solidity contract plus
@@ -136,6 +139,22 @@ Starting from the group coursework, the portfolio refactor focused on:
 Original SEMTM0029 FinTech group project, University of Bristol:
 Mingqin Zheng, Guanxiang Jia, Zhangqingqiu Gu. This repository is Mingqin Zheng's
 portfolio refactor of that work.
+
+## Known limitations
+
+Honest about what a production build would need next:
+
+- **Front-end secrets.** Vite inlines `VITE_*` variables into the client bundle, so
+  a deployed demo exposes its Pinata upload key to visitors. Acceptable for a
+  testnet demo with a scoped key; the real fix is a thin backend that proxies pinning
+  so the key never reaches the browser.
+- **Entry-pass delivery is simulated.** The ticket holder signs an EIP-191 entry pass
+  and staff verify the signature client-side before submitting the on-chain check-in —
+  but the pass is handed over through `localStorage`, which only works across tabs of
+  one browser. It stands in for a real backend or QR hand-off.
+- **Data loading enumerates ids.** Pages walk `0..nextEventId` / `0..nextTokenId`
+  rather than reading an index; parallelised and cached, but an indexer (or contract
+  events) would scale better.
 
 ## Disclaimer
 
