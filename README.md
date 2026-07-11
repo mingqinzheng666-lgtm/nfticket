@@ -13,10 +13,13 @@ a React front end, deployed on the Ethereum Sepolia testnet.
 
 ![NFTicket home page](docs/screenshots/home.png)
 
-## Live contract
+## Live demo
 
-- **Network:** Ethereum Sepolia (testnet)
-- **Address:** [`0x7bBfd6cbDf35959649611b6D7A49b8e745b64a8a`](https://sepolia.etherscan.io/address/0x7bBfd6cbDf35959649611b6D7A49b8e745b64a8a)
+**[nfticket-two.vercel.app](https://nfticket-two.vercel.app/)** — browse events and the
+resale market without a wallet; connect MetaMask on **Sepolia** to buy a ticket.
+Need test ETH? Grab some from a [Sepolia faucet](https://www.alchemy.com/faucets/ethereum-sepolia).
+
+- **Contract:** [`0x7bBfd6cbDf35959649611b6D7A49b8e745b64a8a`](https://sepolia.etherscan.io/address/0x7bBfd6cbDf35959649611b6D7A49b8e745b64a8a) on Ethereum Sepolia (testnet)
 
 ## Why it's interesting
 
