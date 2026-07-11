@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Neon Nights Festival",
+    "date": "2026-08-15",
+    "venue": "Bristol Harbourside Arena",
+    "description": "An open-air electronic music festival across three stages. Doors 6pm, headline set 10pm. Over-18s only; bring ID.",
+    "ticketPrice": "0.002",
+    "maxResalePrice": "0.003",
+    "maxResaleCount": 2,
+    "sections": [
+      { "code": "GA", "rows": 6, "seatsPerRow": 8 },
+      { "code": "VIP", "rows": 2, "seatsPerRow": 6 }
+    ]
+  },
+  {
+    "name": "The Midnight Symphony",
+    "date": "2026-09-05",
+    "venue": "St George's Concert Hall",
+    "description": "A candlelit orchestral evening pairing film scores with classical favourites. Seated, all ages welcome.",
+    "ticketPrice": "0.005",
+    "maxResalePrice": "0.008",
+    "maxResaleCount": 1,
+    "sections": [
+      { "code": "STALLS", "rows": 5, "seatsPerRow": 10 },
+      { "code": "BALCONY", "rows": 3, "seatsPerRow": 8 }
+    ]
+  },
+  {
+    "name": "Cup Final: Rovers vs City",
+    "date": "2026-07-26",
+    "venue": "Ashton Gate Stadium",
+    "description": "The derby that decides the season. Segregated home and away ends. Turnstiles open two hours before kick-off.",
+    "ticketPrice": "0.008",
+    "maxResalePrice": "0.01",
+    "maxResaleCount": 0,
+    "sections": [
+      { "code": "N", "rows": 8, "seatsPerRow": 10 },
+      { "code": "S", "rows": 8, "seatsPerRow": 10 }
+    ]
+  },
+  {
+    "name": "Stand-Up Live: Late Set",
+    "date": "2026-10-12",
+    "venue": "The Comedy Vault",
+    "description": "An intimate late-night stand-up showcase with five acts and a surprise headliner. Strong language throughout.",
+    "ticketPrice": "0.001",
+    "maxResalePrice": "0.0015",
+    "maxResaleCount": 3,
+    "sections": [
+      { "code": "FRONT", "rows": 3, "seatsPerRow": 6 },
+      { "code": "REAR", "rows": 4, "seatsPerRow": 8 }
+    ]
+  }
+]

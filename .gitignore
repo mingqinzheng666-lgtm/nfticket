@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.env.local
+cache/
+artifacts/
+typechain-types/
+coverage/
+*.log
+
+# OS / editor junk
+.DS_Store
+.Rhistory
+
+# Course material, not part of the codebase
+group report.pdf

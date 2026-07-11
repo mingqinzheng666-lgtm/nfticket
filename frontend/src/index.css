@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-night font-sans text-paper antialiased;
+  }
+
+  ::selection {
+    background: rgba(255, 184, 77, 0.25);
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-spotlight/70 ring-offset-2 ring-offset-night;
+  }
+}
+
+@layer components {
+  /* Small uppercase mono label above a section title */
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.22em] text-mist;
+  }
+
+  .card {
+    @apply rounded-2xl border border-white/10 bg-panel;
+  }
+
+  .card-hover {
+    @apply transition duration-200 hover:-translate-y-0.5 hover:border-white/20 hover:shadow-lift;
+  }
+
+  .btn-spot {
+    @apply inline-flex items-center justify-center rounded-lg bg-spotlight px-4 py-2 text-sm font-semibold text-[#1A1200] transition hover:bg-[#FFC96E] hover:shadow-glow disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:shadow-none;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-lg border border-white/15 px-4 py-2 text-sm font-medium text-paper transition hover:border-white/30 hover:bg-white/5 disabled:cursor-not-allowed disabled:opacity-40;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center rounded-lg border border-spent/40 px-4 py-2 text-sm font-medium text-spent transition hover:bg-spent/10 disabled:cursor-not-allowed disabled:opacity-40;
+  }
+
+  .input-dark {
+    @apply w-full rounded-lg border border-white/10 bg-panel2 px-3 py-2 text-sm text-paper placeholder:text-mist/50 focus:border-spotlight/60 focus:outline-none;
+  }
+
+  .field-label {
+    @apply mb-1 block text-sm font-medium text-mist;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 font-mono text-[11px] font-medium;
+  }
+
+  /* Ambient stage light wash for the home hero */
+  .hero-beams {
+    background:
+      radial-gradient(620px 400px at 16% -12%, rgba(110, 123, 255, 0.2), transparent 65%),
+      radial-gradient(720px 440px at 80% -18%, rgba(255, 184, 77, 0.14), transparent 65%);
+  }
+
+  /* Perforated tear line between a ticket body and its stub */
+  .ticket-tear {
+    @apply relative border-t-2 border-dashed border-white/15;
+  }
+
+  .ticket-tear::before,
+  .ticket-tear::after {
+    content: "";
+    @apply absolute top-0 h-5 w-5 -translate-y-1/2 rounded-full bg-night;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .ticket-tear::before {
+    @apply -left-2.5;
+  }
+
+  .ticket-tear::after {
+    @apply -right-2.5;
+  }
+
+  /* CSS-only barcode strip for ticket stubs */
+  .barcode {
+    height: 28px;
+    background-image: repeating-linear-gradient(
+      90deg,
+      currentColor 0 2px,
+      transparent 2px 5px,
+      currentColor 5px 6px,
+      transparent 6px 10px,
+      currentColor 10px 13px,
+      transparent 13px 16px
+    );
+    opacity: 0.65;
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded-2xl bg-white/5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

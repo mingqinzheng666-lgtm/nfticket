@@ -14,7 +14,10 @@ async function main() {
   await nfticket.waitForDeployment();
 
   const address = await nfticket.getAddress();
+  const receipt = await nfticket.deploymentTransaction()?.wait();
+  const deployBlock = receipt?.blockNumber ?? null;
   console.log("\nNFTicket deployed to:", address);
+  console.log("Deployed at block:", deployBlock);
   console.log("\nNext steps:");
   console.log("1. Update frontend/src/contract/config.js with CONTRACT_ADDRESS =", `"${address}"`);
   console.log("2. Run: npm run compile  (copies ABI to frontend)");
